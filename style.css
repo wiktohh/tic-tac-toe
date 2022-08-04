@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.board{
+    background-color: #f0f0f0;
+    border:1px solid #ddd;
+    width:306px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,100px);
+    gap:3px;
+    cursor: pointer;
+}
+.board-item{
+    border:0;
+    background-color: #fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:2rem;
+    color:#222
+}
+.board-item:hover{
+    background-color: #fafafa;
+}
+.winner{
+    animation: win 2s linear infinite;
+}
+
+@keyframes win {
+    0%{background-color: #fafafa;}
+    50%{background-color: green;}
+    100%{background-color: #fafafa;}
+  }
+  
